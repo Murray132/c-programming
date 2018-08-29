@@ -104,7 +104,7 @@
     temp.value = v-48;
   }
   else {
-    temp.value = VALUE_ACE;
+    temp.value = 10;
   }
   switch (s){
   case 99: temp.suit = CLUBS; break;
