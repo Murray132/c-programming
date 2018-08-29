@@ -92,11 +92,11 @@
     if (v==i+48){
       temp.value = i;
     }
-  }
+  
   else{
     temp.value = VALUE_JACK;
   }
-  
+  }
   switch (s){
   case 99: temp.suit = CLUBS; break;
   case 100: temp.suit = DIAMONDS; break;
