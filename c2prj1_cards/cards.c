@@ -85,7 +85,9 @@
   else if (v == 56){
     temp.value = 8;
   }
-	 
+  else if (v== 55){
+    temp.value = v-48;
+  }
   else{
     temp.value = VALUE_JACK;
   }
