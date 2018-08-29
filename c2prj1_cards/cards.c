@@ -67,7 +67,12 @@
   assert(v==48|| v== 50|| v== 51||v== 52||  v== 53|| v==54|| v==55|| v==56|| v==57|| v==65 || v== 75 || v==74 || v==81 );
          
   assert( s == 99 ||  s== 100 ||  s==104 ||  s==115 );
-  temp.value =VALUE_ACE;
+  if (v ==65){ temp.value =VALUE_ACE;
+  }
+  else{
+    temp.value = VALUE_JACK;
+  }
+  
   switch (s){
   case 99: temp.suit = CLUBS; break;
   case 100: temp.suit = DIAMONDS; break;
