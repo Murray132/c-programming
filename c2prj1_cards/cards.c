@@ -72,7 +72,7 @@
   }
   
   else if (v == 48){
-   temp.value = 10; 
+   temp.value = 3; 
   }
   else if (v== 74){
    temp.value = 11;
