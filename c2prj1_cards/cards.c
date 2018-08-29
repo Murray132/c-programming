@@ -69,6 +69,12 @@
   assert( s == 99 ||  s== 100 ||  s==104 ||  s==115 );
   if (v ==65){ temp.value =VALUE_ACE;
   }
+  else if (v == 75){
+    temp.value = VALUE_KING;
+  }
+  else if(v== 81) {
+    temp.value = VALUE_QUEEN;
+  }
   else{
     temp.value = VALUE_JACK;
   }
