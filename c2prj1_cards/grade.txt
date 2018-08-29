@@ -1,9 +1,6 @@
-Grading at Wed Aug 29 04:03:18 UTC 2018
+Grading at Wed Aug 29 04:04:12 UTC 2018
 Compiling cards.c
 cards.c: In function ‘card_from_letters’:
-cards.c:94:5: error: expected ‘;’ before ‘}’ token
-     }
-     ^
 cards.c:96:3: error: ‘else’ without a previous ‘if’
    else{
    ^
