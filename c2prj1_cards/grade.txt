@@ -1,9 +1,50 @@
-Grading at Wed Aug 29 04:04:12 UTC 2018
+Grading at Wed Aug 29 04:05:41 UTC 2018
 Compiling cards.c
-cards.c: In function ‘card_from_letters’:
-cards.c:96:3: error: ‘else’ without a previous ‘if’
-   else{
-   ^
-Could not compile your card.c!
+Testing card_from_letters
+For card_from_letters('0','c'), I expected 0c but got Jc
+For card_from_letters('0','d'), I expected 0d but got Jd
+For card_from_letters('0','h'), I expected 0h but got Jh
+For card_from_letters('0','s'), I expected 0s but got Js
+For card_from_letters('2','c'), I expected 2c but got Jc
+For card_from_letters('2','d'), I expected 2d but got Jd
+For card_from_letters('2','h'), I expected 2h but got Jh
+For card_from_letters('2','s'), I expected 2s but got Js
+For card_from_letters('3','c'), I expected 3c but got Jc
+For card_from_letters('3','d'), I expected 3d but got Jd
+For card_from_letters('3','h'), I expected 3h but got Jh
+For card_from_letters('3','s'), I expected 3s but got Js
+For card_from_letters('4','c'), I expected 4c but got Jc
+For card_from_letters('4','d'), I expected 4d but got Jd
+For card_from_letters('4','h'), I expected 4h but got Jh
+For card_from_letters('4','s'), I expected 4s but got Js
+For card_from_letters('5','c'), I expected 5c but got Jc
+For card_from_letters('5','d'), I expected 5d but got Jd
+For card_from_letters('5','h'), I expected 5h but got Jh
+For card_from_letters('5','s'), I expected 5s but got Js
+For card_from_letters('6','c'), I expected 6c but got Jc
+For card_from_letters('6','d'), I expected 6d but got Jd
+For card_from_letters('6','h'), I expected 6h but got Jh
+For card_from_letters('6','s'), I expected 6s but got Js
+For card_from_letters('7','c'), I expected 7c but got Jc
+For card_from_letters('7','d'), I expected 7d but got Jd
+For card_from_letters('7','h'), I expected 7h but got Jh
+For card_from_letters('7','s'), I expected 7s but got Js
+For card_from_letters('8','c'), I expected 8c but got Jc
+For card_from_letters('8','d'), I expected 8d but got Jd
+For card_from_letters('8','h'), I expected 8h but got Jh
+For card_from_letters('8','s'), I expected 8s but got Js
+For card_from_letters('A','c'), I expected Ac but got Jc
+For card_from_letters('A','d'), I expected Ad but got Jd
+For card_from_letters('A','h'), I expected Ah but got Jh
+For card_from_letters('A','s'), I expected As but got Js
+For card_from_letters('K','c'), I expected Kc but got Jc
+For card_from_letters('K','d'), I expected Kd but got Jd
+For card_from_letters('K','h'), I expected Kh but got Jh
+For card_from_letters('K','s'), I expected Ks but got Js
+For card_from_letters('Q','c'), I expected Qc but got Jc
+For card_from_letters('Q','d'), I expected Qd but got Jd
+For card_from_letters('Q','h'), I expected Qh but got Jh
+For card_from_letters('Q','s'), I expected Qs but got Js
+Failed
 
 Overall Grade: FAILED
