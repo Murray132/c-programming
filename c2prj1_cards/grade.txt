@@ -1,4 +1,4 @@
-Grading at Wed Aug 29 03:56:12 UTC 2018
+Grading at Wed Aug 29 03:58:18 UTC 2018
 Compiling cards.c
 Testing card_from_letters
 For card_from_letters('0','c'), I expected 0c but got Jc
@@ -29,14 +29,6 @@ For card_from_letters('7','c'), I expected 7c but got Jc
 For card_from_letters('7','d'), I expected 7d but got Jd
 For card_from_letters('7','h'), I expected 7h but got Jh
 For card_from_letters('7','s'), I expected 7s but got Js
-For card_from_letters('8','c'), I expected 8c but got Jc
-For card_from_letters('8','d'), I expected 8d but got Jd
-For card_from_letters('8','h'), I expected 8h but got Jh
-For card_from_letters('8','s'), I expected 8s but got Js
-For card_from_letters('9','c'), I expected 9c but got Jc
-For card_from_letters('9','d'), I expected 9d but got Jd
-For card_from_letters('9','h'), I expected 9h but got Jh
-For card_from_letters('9','s'), I expected 9s but got Js
 Failed
 
 Overall Grade: FAILED
