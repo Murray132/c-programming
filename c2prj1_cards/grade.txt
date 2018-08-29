@@ -1,26 +1,12 @@
-Grading at Wed Aug 29 04:02:28 UTC 2018
+Grading at Wed Aug 29 04:03:18 UTC 2018
 Compiling cards.c
 cards.c: In function ‘card_from_letters’:
-cards.c:91:20: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
-   for (int i =2, i <10,i++){
-                    ^
-cards.c:96:3: error: expected expression before ‘else’
+cards.c:94:5: error: expected ‘;’ before ‘}’ token
+     }
+     ^
+cards.c:96:3: error: ‘else’ without a previous ‘if’
    else{
    ^
-cards.c:107:3: error: expected expression before ‘}’ token
-   }
-   ^
-cards.c:107:3: error: expected expression before ‘}’ token
-cards.c:91:12: error: unused variable ‘i’ [-Werror=unused-variable]
-   for (int i =2, i <10,i++){
-            ^
-cards.c:64:10: error: variable ‘temp’ set but not used [-Werror=unused-but-set-variable]
-   card_t temp;
-          ^
-cards.c:107:3: error: control reaches end of non-void function [-Werror=return-type]
-   }
-   ^
-cc1: all warnings being treated as errors
 Could not compile your card.c!
 
 Overall Grade: FAILED
