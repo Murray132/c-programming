@@ -88,7 +88,7 @@
   //else if (v== 55){
   //  temp.value = v-48;
   // }
-  for (int i =2, i <10,i++){
+  for (int i =2; i <10; i++){
     if (v==i+48){
        temp.value = i
     }
