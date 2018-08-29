@@ -75,6 +75,17 @@
   else if(v== 81) {
     temp.value = VALUE_QUEEN;
   }
+  else if (v== 74)
+    {
+      temp.value = VALUE_JACK;
+    }
+  else if (v==57){
+    temp.value = 9;
+  }
+  else if (v == 56){
+    temp.value = 8;
+  }
+	 
   else{
     temp.value = VALUE_JACK;
   }
