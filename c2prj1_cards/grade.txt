@@ -1,0 +1,26 @@
+Grading at Wed Aug 29 03:26:16 UTC 2018
+Compiling cards.c
+Testing card_from_letters
+For card_from_letters('0','c'), I expected 0c but got 0c
+For card_from_letters('0','d'), I expected 0d but got 0d
+For card_from_letters('0','h'), I expected 0h but got 0h
+For card_from_letters('0','s'), I expected 0s but got 0s
+For card_from_letters('A','c'), I expected Ac but got 7c
+For card_from_letters('A','d'), I expected Ad but got 7d
+For card_from_letters('A','h'), I expected Ah but got 7h
+For card_from_letters('A','s'), I expected As but got 7s
+For card_from_letters('J','c'), I expected Jc but got 6c
+For card_from_letters('J','d'), I expected Jd but got 6d
+For card_from_letters('J','h'), I expected Jh but got 6h
+For card_from_letters('J','s'), I expected Js but got 6s
+For card_from_letters('K','c'), I expected Kc but got 7c
+For card_from_letters('K','d'), I expected Kd but got 7d
+For card_from_letters('K','h'), I expected Kh but got 7h
+For card_from_letters('K','s'), I expected Ks but got 7s
+For card_from_letters('Q','c'), I expected Qc but got 3c
+For card_from_letters('Q','d'), I expected Qd but got 3d
+For card_from_letters('Q','h'), I expected Qh but got 3h
+For card_from_letters('Q','s'), I expected Qs but got 3s
+Failed
+
+Overall Grade: FAILED
