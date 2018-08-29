@@ -1,30 +1,26 @@
-Grading at Wed Aug 29 03:59:38 UTC 2018
+Grading at Wed Aug 29 04:02:28 UTC 2018
 Compiling cards.c
-Testing card_from_letters
-For card_from_letters('0','c'), I expected 0c but got Jc
-For card_from_letters('0','d'), I expected 0d but got Jd
-For card_from_letters('0','h'), I expected 0h but got Jh
-For card_from_letters('0','s'), I expected 0s but got Js
-For card_from_letters('2','c'), I expected 2c but got Jc
-For card_from_letters('2','d'), I expected 2d but got Jd
-For card_from_letters('2','h'), I expected 2h but got Jh
-For card_from_letters('2','s'), I expected 2s but got Js
-For card_from_letters('3','c'), I expected 3c but got Jc
-For card_from_letters('3','d'), I expected 3d but got Jd
-For card_from_letters('3','h'), I expected 3h but got Jh
-For card_from_letters('3','s'), I expected 3s but got Js
-For card_from_letters('4','c'), I expected 4c but got Jc
-For card_from_letters('4','d'), I expected 4d but got Jd
-For card_from_letters('4','h'), I expected 4h but got Jh
-For card_from_letters('4','s'), I expected 4s but got Js
-For card_from_letters('5','c'), I expected 5c but got Jc
-For card_from_letters('5','d'), I expected 5d but got Jd
-For card_from_letters('5','h'), I expected 5h but got Jh
-For card_from_letters('5','s'), I expected 5s but got Js
-For card_from_letters('6','c'), I expected 6c but got Jc
-For card_from_letters('6','d'), I expected 6d but got Jd
-For card_from_letters('6','h'), I expected 6h but got Jh
-For card_from_letters('6','s'), I expected 6s but got Js
-Failed
+cards.c: In function ‘card_from_letters’:
+cards.c:91:20: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+   for (int i =2, i <10,i++){
+                    ^
+cards.c:96:3: error: expected expression before ‘else’
+   else{
+   ^
+cards.c:107:3: error: expected expression before ‘}’ token
+   }
+   ^
+cards.c:107:3: error: expected expression before ‘}’ token
+cards.c:91:12: error: unused variable ‘i’ [-Werror=unused-variable]
+   for (int i =2, i <10,i++){
+            ^
+cards.c:64:10: error: variable ‘temp’ set but not used [-Werror=unused-but-set-variable]
+   card_t temp;
+          ^
+cards.c:107:3: error: control reaches end of non-void function [-Werror=return-type]
+   }
+   ^
+cc1: all warnings being treated as errors
+Could not compile your card.c!
 
 Overall Grade: FAILED
