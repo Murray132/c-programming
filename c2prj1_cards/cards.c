@@ -79,14 +79,19 @@
     {
       temp.value = VALUE_JACK;
     }
-  else if (v==57){
-    temp.value = 9;
-  }
-  else if (v == 56){
-    temp.value = 8;
-  }
-  else if (v== 55){
-    temp.value = v-48;
+  // else if (v==57){
+  //  temp.value = 9;
+  // }
+  //else if (v == 56){
+  //  temp.value = 8;
+  //}
+  //else if (v== 55){
+  //  temp.value = v-48;
+  // }
+  for (int i =2, i <10,i++){
+    if (v==i+48){
+       temp.value = i
+    }
   }
   else{
     temp.value = VALUE_JACK;
