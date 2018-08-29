@@ -79,23 +79,32 @@
     {
       temp.value = VALUE_JACK;
     }
-  // else if (v==57){
-  //  temp.value = 9;
-  // }
-  //else if (v == 56){
-  //  temp.value = 8;
-  //}
-  //else if (v== 55){
-  //  temp.value = v-48;
-  // }
-  for (int i =2; i <10; i++){
-    if (v==i+48){
-      temp.value = i;
-    }
-  
-  else{
-    temp.value = VALUE_JACK;
+   else if (v==57){
+    temp.value = 9;
+   }
+  else if (v == 56){
+    temp.value = 8;
   }
+  else if (v== 55){
+    temp.value = v-48;
+   }
+  else if (v == 54){
+    temp.value =v -48;
+  }
+  else if (v== 53){
+    temp.value =v-48;
+  }
+  else if (v==52){
+    temp.value = v-48;
+  }
+  else if (v== 51){
+    temp.value =v -48;
+  }
+  else if (v== 50){
+    temp.value = v-48;
+  }
+  else {
+    temp.value = VALUE_ACE;
   }
   switch (s){
   case 99: temp.suit = CLUBS; break;
