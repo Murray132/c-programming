@@ -12,10 +12,10 @@ int * arrayMax(int * array, int n) {
   
     if (array[i]>array[maxindex]){
       maxindex = i;
-      maxelement = maxelement + i ; 
+      
     }
   }
-
+  maxelement = &array[maxindex];
   return maxelement;
 
 
