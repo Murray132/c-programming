@@ -1,0 +1,30 @@
+Grading at Fri Sep 21 05:46:13 UTC 2018
+Attempting to compile maxSeq.c 
+maxSeq.c: In function ‘maxSeq’:
+maxSeq.c:9:12: error: return makes integer from pointer without a cast [-Werror=int-conversion]
+     return NULL;
+            ^
+maxSeq.c:11:3: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   else if (n=0) {
+   ^
+maxSeq.c:14:3: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   else if (n=1) {
+   ^
+maxSeq.c:20:8: error: ‘j’ undeclared (first use in this function)
+   for (j=1, j<n, j++){
+        ^
+maxSeq.c:20:8: note: each undeclared identifier is reported only once for each function it appears in
+maxSeq.c:20:11: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   for (j=1, j<n, j++){
+           ^
+maxSeq.c:20:16: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   for (j=1, j<n, j++){
+                ^
+maxSeq.c:20:21: error: expected ‘;’ before ‘)’ token
+   for (j=1, j<n, j++){
+                     ^
+maxSeq.c:20:21: error: expected expression before ‘)’ token
+cc1: all warnings being treated as errors
+The code did not compile!
+
+Overall Grade: F
