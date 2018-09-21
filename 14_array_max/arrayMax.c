@@ -4,7 +4,7 @@
 int * arrayMax(int * array, int n) {
   int * maxelement = array;
   
-  if (n == 0){
+  if (n <= 0){
     return NULL;
   }
   int maxindex = 0;
@@ -51,7 +51,7 @@ int main(void) {
   int array1[] = { 77, 33, 19, 99, 42, 6, 27, 4};
   int array2[] = { -3, -42, -99, -1000, -999, -88, -77};
   int array3[] = { 425, 59, -3, 77, 0, 36};
-
+ 
   doTest (array1, 8);
   doTest (array2, 7);
   doTest (array3, 6);
