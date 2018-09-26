@@ -3,7 +3,20 @@
 #include <string.h>
 
 void reverse(char * str) {
-  //WRITE ME!
+  if(str == NULL){
+    return;
+  }
+  char * first = str;
+
+  char * last = first + strlen(str) - 1;
+
+  while(first < last){
+    char inter = *first;
+    *first = *last;
+    *last = inter;
+    first++;
+    last--;
+  }
 }
 
 int main(void) {
