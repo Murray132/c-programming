@@ -1,7 +1,0 @@
-Grading at Fri Sep 28 20:00:56 UTC 2018
-Compiling deck.c
-Compiling cards.c
-Linking cards.o deck.o deck-c4.o and the grader's .o file
-valgrind reported memory errors
-
-Overall Grade: FAILED
