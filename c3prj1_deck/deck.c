@@ -56,9 +56,9 @@ void shuffle(deck_t * d){
     arr[j] = ptc + j;
   }
   //use a different seed value so that we don't get same result each time we run this program
-  srand(time(NULL));
+  // srand(time(NULL));
   for(int i = n-1; i > 0; i--) {
-    int k = rand() % (i+1);
+    int k = random() % (i+1);
     card_t * temp = arr[i];
     arr[i] = arr[k];
     arr[k] = temp;
@@ -70,11 +70,11 @@ void assert_full_deck(deck_t * d) {
   suit_t n = (*d).n_cards;
   card_t * ptc = *((*d).cards);
   for (int i = n-1; i > 0; i--) {
-deck_t new;
-new.n_cards = n-i;
-*(new.cards) = ptc + n - i;
-  deck_t * d1;
-d1 = &new;
+    deck_t new;
+    new.n_cards = n-i;
+    *(new.cards) = ptc + n - i;
+    deck_t * d1;
+    d1 = &new;
     card_t c = *(ptc + n - 1 - i);
     
     int e = deck_contains(d1,c);
