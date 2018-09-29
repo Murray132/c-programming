@@ -40,7 +40,7 @@
        case VALUE_QUEEN : x ='Q' ; break;
        case VALUE_KING : x ='K' ; break;
        case VALUE_ACE : x = 'A' ; break;
-       default : x = 'N'; break;
+       default : x = 'W'; break;
       }
     return x;
   }
