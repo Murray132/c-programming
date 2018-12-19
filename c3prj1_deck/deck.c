@@ -15,7 +15,7 @@ card_t card_from_letters(char value_let, char suit_let);
 card_t card_from_num(unsigned c);
 
 void print_hand(deck_t * hand) {
-  suit_t n = (*hand).n_cards;
+  size_t n = (*hand).n_cards;
   card_t ** ptc1 = (*hand).cards;
   for(int i = 0; i < n; i++) {
     print_card(**ptc1);
@@ -25,13 +25,13 @@ void print_hand(deck_t * hand) {
 }
 
 int deck_contains(deck_t * d, card_t c) {
-  suit_t n = (*d).n_cards;
+  size_t n = (*d).n_cards;
 
-  unsigned a1;
-  size_t b1;
+  unsigned a1 = 0;
+  size_t b1 = 0;
 
-  unsigned a2;
-  size_t b2;
+  unsigned a2 = 0;
+  size_t b2 = 0;
 
   for(int i = 0; i < n; i++) {
     a1 = (**((*d).cards+i)).value;
@@ -46,25 +46,25 @@ int deck_contains(deck_t * d, card_t c) {
 }
 
 void shuffle(deck_t * d){
-  suit_t n = (*d).n_cards;
+  size_t n = (*d).n_cards;
   card_t ** ptc = (*d).cards;
-  card_t * arr[n];
-  for (int j = 0; j < n; j++) {
-    arr[j] = *(ptc + j);
-  }
+  for(int i = n-1; i > 0; i--){
   
-  for(int i = n-1; i > 0; i--) {
-    int k = random() % (i+1);
-    card_t * temp = arr[i];
-    arr[i] = arr[k];
-    arr[k] = temp;
+    int k =random() % (i+1);
+    card_t ** ptc1 = ptc +n -1 -i;
+    card_t ** ptc2 = ptc + k;
+    card_t ** temp = ptc1;
+    *ptc1 = *(ptc+k);
+    *ptc2 = *temp;
+    
   }
+      
 }
     
 
 void assert_full_deck(deck_t * d) {
 
-  suit_t n = (*d).n_cards;
+  size_t n = (*d).n_cards;
   card_t ** ptc = (*d).cards;
   for (int i = 0; i < n; i++) {
     card_t ** new = ptc+i;
