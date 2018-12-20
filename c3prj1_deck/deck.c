@@ -67,7 +67,6 @@ void shuffle(deck_t * d){
     //*ptc1 = *ptc2;
     //*ptc2 = temp;
   //    }
-
 }
     
 
