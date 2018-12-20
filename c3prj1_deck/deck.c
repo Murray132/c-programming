@@ -48,12 +48,14 @@ int deck_contains(deck_t * d, card_t c) {
 void shuffle(deck_t * d){
   size_t n = (*d).n_cards;
   card_t ** ptc = (*d).cards;
-  for(int i = n-1; i > 0; i--){
+  card_t ** ptc1=ptc;
+  card_t ** ptc2=ptc;
+  for(int i = 0; i <n-1; i++){
   
-    int k = random()%(i+1);
-    
-    card_t ** ptc1 = ptc +n -1 -i;
-    card_t ** ptc2 = ptc + k;
+    int k = random()%(n-i);
+    ptc1 = ptc +i;
+    ptc2 = ptc +k;
+ 
     card_t * temp = *ptc1;
     *ptc1 = *ptc2;
     *ptc2 = temp;
