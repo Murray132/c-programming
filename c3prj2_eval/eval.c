@@ -24,12 +24,12 @@ int card_ptr_comp(const void * vp1, const void * vp2) {
   
   else{
 
-    if(s1<s2){
-      return s1-s2;
+    if(s1>s2){
+      return s2-s1;
     }//so, in this case card1 > card2 
 
-    else if (s1>s2){
-      return s1-s2;
+    else if (s1<s2){
+      return s2-s1;
     }//In this case card1 < card2
 
     else{
