@@ -223,7 +223,7 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
         if(checkidx == 1){
 	  int temp =1;
 	  for(int i = index+1; i< n; i++){
-            if( (**(c+i)).suit == fs){
+            if( ((**(c+i)).suit == fs) && ( (**(c+i-1)).value -(**(c+i)).value   <= 1   ) ){
               temp++;
 	      if(temp ==5){
 		return 1;
@@ -239,7 +239,7 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
         if(checkidx1 ==1 ){
           int temp =1;
 	  for(int i = index+1; i< n; i++){
-            if( ((**(c+i)).suit == fs)    ){              
+            if( ((**(c+i)).suit == fs) && ( (**(c+i-1)).value -(**(c+i)).value   <= 1   )    ){              
               temp++;
 	      if(temp ==5){
 		return 1;
@@ -256,7 +256,7 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
 	      if(checkidx2 ==1){
 		int temp =1;
 	        for(int i = index+1; i<n ; i++){
-                  if((**(c+i)).suit == fs){
+                  if((**(c+i)).suit == fs && ( (**(c+i-1)).value -(**(c+i)).value <= 1   ) ){
 		    temp++;
 		    if(temp ==4){
 		      return -1;
