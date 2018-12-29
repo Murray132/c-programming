@@ -230,6 +230,11 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
       else { //the current card is ACE
         int checkidx1 = n_length(hand,5,index);
         if(checkidx1 ==1 ){
+	  for(int i =0 ; i<5 ;i++){
+	    if( (**(c+index+i)).suit  != fs ){
+	      return 0;
+	    }
+	  }
 	  return 1;
         }
         else{// find the index of 5, if 5 doesn't exist then return 0
@@ -237,6 +242,12 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
 	    if((**(c+k)).value ==5){
 	      int checkidx2 = n_length(hand,4,k);
 	      if(checkidx2 ==1){
+		for(int j=0 ; j<4 ;j++){
+		  if((**(c+k+j)).suit != fs){
+		    return 0;
+		  }
+
+		}
 	        return -1;
 	      }
 	    }
