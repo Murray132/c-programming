@@ -308,6 +308,7 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
       else if( (*(h1.cards[i])).value < (*(h2.cards[i])).value ){
 	return -1;
       }
+      /*
       else{// compare suits
 	if((*(h1.cards[i])).suit > (*(h2.cards[i])).suit){
 	  return -1;
@@ -316,6 +317,7 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
 	  return 1;
 	}
       }
+      */
     }
   }
 
