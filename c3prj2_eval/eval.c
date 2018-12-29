@@ -109,7 +109,7 @@ size_t get_match_index(unsigned * match_counts, size_t n,unsigned n_of_akind){
     for (int i =1; i<n;i++){
       int temp = LowestIndex +1;
      
-      if(match_counts[temp] == match_counts[n_of_akind] ){
+      if(match_counts[temp] == n_of_akind ){
 	LowestIndex = i;
 	break;
       }
