@@ -42,8 +42,17 @@ int main(int argc, char ** argv){
     }
   }
 
+  int total = 0;
+  for (int j=0;j<26;j++;){
+    total = total + array[j];
+  }
+  if(total == 0){
+    fprintf(stderr," there is no letter in this context \n" );
+    return EXIT_FAILURE;
+  }
+  
   int most_common_letter = get_largest_element(array, 26);
-  printf("The most common is %d\n",most_common_letter);
+  //printf("The most common is %d\n",most_common_letter);
   int answer;
   if(most_common_letter >= 4){
     answer = most_common_letter - 4;
