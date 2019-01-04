@@ -43,7 +43,7 @@ int main(int argc, char ** argv){
   }
 
   int total = 0;
-  for (int j=0;j<26;j++;){
+  for (int j=0;j<26;j++){
     total = total + array[j];
   }
   if(total == 0){
