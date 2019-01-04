@@ -42,10 +42,6 @@ int main(int argc, char ** argv){
     }
   }
 
-  for(int j =0; j<26 ;j++){
-    printf("array[%d] is %d\n",j,array[j]);
-  }
-
   int most_common_letter = get_largest_element(array, 26);
   printf("The most common is %d\n",most_common_letter);
   int answer;
