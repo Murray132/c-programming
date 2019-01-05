@@ -27,18 +27,22 @@ int main(int argc, char ** argv){
     perror("Could not open file");
     return EXIT_FAILURE;
   }
-
+  
   int array[26]={0};
   int c;
   while((c = fgetc(f)) != EOF){
     if(isalpha(c)){
       c = tolower(c);
+      int c1 = c-97;
+      array[c1]++;
+      /*
       for (int i = 0; i<26; i++){
         int lettervalue = i+97;
 	if(c == lettervalue){
 	  array[i] = array[i]+1;
 	}
       }
+      */
     }
   }
 
