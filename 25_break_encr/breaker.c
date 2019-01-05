@@ -53,10 +53,10 @@ int main(int argc, char ** argv){
   
   int most_common_letter = get_largest_element(array, 26);
   //printf("The most common is %d\n",most_common_letter);
-  int answer = (most_common_letter -4)%26;
-  printf("%d\n",answer);
-  return EXIT_SUCCESS;
-  /*
+  //int answer = (most_common_letter -4)%26;
+  //printf("%d\n",answer);
+  //return EXIT_SUCCESS;
+  int answer;
   if(most_common_letter >= 4){
     answer = most_common_letter - 4;
     printf("%d\n",answer);
@@ -69,5 +69,5 @@ int main(int argc, char ** argv){
     printf("%d\n",answer);
     return EXIT_SUCCESS;
   }
-  */
+  
 }
