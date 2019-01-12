@@ -5,9 +5,10 @@
 
 char * computeOutputFileName(const char * inputName) {
   //WRITE ME
-  int length = strlen(inputName);
-  char * Outnameptr = malloc((length+8)*sizeof(*Outnameptr));
-  char * ptr = Outnameptr;
+  /*
+  int len = strlen(inputName);
+  char * OutNameptr = malloc((len+8) * sizeof(*OutNameptr));
+  char * ptr = OutNameptr;
 
   while(*inputName !='0'){
     *ptr = *inputName;
@@ -22,6 +23,12 @@ char * computeOutputFileName(const char * inputName) {
     suffix++;
   }
   *ptr = '\0';
+  */
+  const char suffix[]=".counts";
+  char * outputName = malloc((strlen(inputName) + strlen(suffix)+1) * sizeof(*outputName));
+  strcpy(outputName, inputName);
+  strcat(outputName, suffix);
   
-  return Outnameptr;
+  return outputName;
 }
+
