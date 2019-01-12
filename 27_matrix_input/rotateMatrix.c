@@ -14,7 +14,7 @@ void rotate(char matrix[10][10]){
   }
 }
 
-int main(argc, char** argv){
+int main(int argc, char** argv){
   if(argc != 2){
     fprintf(stderr, "Usage : Wrong amount of Arguments\n");
     return EXIT_FAILURE;
