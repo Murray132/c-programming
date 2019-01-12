@@ -39,6 +39,7 @@ int main(int argc, char** argv){
 
     if(row >9){// first check whether the input matrix has more than 10 rows
       fprintf(stderr,"Usage: Exceed maximal number of rows ");
+      return EXIT_FAILURE;
     }
 
     if(column == 10){
