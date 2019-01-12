@@ -1,53 +1,154 @@
-Grading at Sat Jan 12 00:59:16 UTC 2019
+Grading at Sat Jan 12 01:00:32 UTC 2019
 Attempting to compile rotateMatrix.c
-testcase1 passed
-#################################################
-testcase2: NonExistentFile
- (should indicate an error)
-testcase2 passed
-#################################################
-testcase3: blank.txt
- (should indicate an error)
-testcase3 passed
-#################################################
-testcase4: short-line.txt
- (should indicate an error)
-testcase4 passed
-#################################################
-testcase5: short-file.txt
- (should indicate an error)
-testcase5 passed
-#################################################
-testcase6: long-line.txt
- (should indicate an error)
-testcase6 passed
-#################################################
-testcase7: long-file.txt
- (should indicate an error)
-testcase7 passed
-#################################################
-testcase8: long-line-2.txt
- (should indicate an error)
-testcase8 passed
-#################################################
-testcase9: normal1.txt normal2.txt
- (should indicate an error)
-testcase9 passed
-#################################################
-testcase10: normal1.txt
-Your file matched the expected output
-testcase10 passed
-#################################################
-testcase10: normal2.txt
-Your file matched the expected output
-testcase10 passed
-#################################################
-testcase10: normal3.txt
-Your file matched the expected output
-testcase10 passed
-#################################################
-testcase10: eof.txt
-Your file matched the expected output
-testcase10 passed
+rotateMatrix.c:1:2: error: stray ‘#’ in program
+ w#include <stdio.h>
+  ^
+rotateMatrix.c:1:1: error: unknown type name ‘w’
+ w#include <stdio.h>
+ ^
+rotateMatrix.c:1:11: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+ w#include <stdio.h>
+           ^
+In file included from rotateMatrix.c:2:0:
+/usr/include/stdlib.h:139:8: error: unknown type name ‘size_t’
+ extern size_t __ctype_get_mb_cur_max (void) __THROW __wur;
+        ^
+In file included from rotateMatrix.c:2:0:
+/usr/include/stdlib.h:331:4: error: unknown type name ‘size_t’
+    size_t __statelen) __THROW __nonnull ((2));
+    ^
+/usr/include/stdlib.h:361:4: error: unknown type name ‘size_t’
+    size_t __statelen,
+    ^
+/usr/include/stdlib.h:466:22: error: unknown type name ‘size_t’
+ extern void *malloc (size_t __size) __THROW __attribute_malloc__ __wur;
+                      ^
+/usr/include/stdlib.h:468:22: error: unknown type name ‘size_t’
+ extern void *calloc (size_t __nmemb, size_t __size)
+                      ^
+/usr/include/stdlib.h:468:38: error: unknown type name ‘size_t’
+ extern void *calloc (size_t __nmemb, size_t __size)
+                                      ^
+/usr/include/stdlib.h:480:36: error: unknown type name ‘size_t’
+ extern void *realloc (void *__ptr, size_t __size)
+                                    ^
+In file included from /usr/include/stdlib.h:492:0,
+                 from rotateMatrix.c:2:
+/usr/include/alloca.h:32:22: error: unknown type name ‘size_t’
+ extern void *alloca (size_t __size) __THROW;
+                      ^
+In file included from rotateMatrix.c:2:0:
+/usr/include/stdlib.h:498:22: error: unknown type name ‘size_t’
+ extern void *valloc (size_t __size) __THROW __attribute_malloc__ __wur;
+                      ^
+/usr/include/stdlib.h:503:45: error: unknown type name ‘size_t’
+ extern int posix_memalign (void **__memptr, size_t __alignment, size_t __size)
+                                             ^
+/usr/include/stdlib.h:503:65: error: unknown type name ‘size_t’
+ extern int posix_memalign (void **__memptr, size_t __alignment, size_t __size)
+                                                                 ^
+/usr/include/stdlib.h:755:9: error: unknown type name ‘size_t’
+         size_t __nmemb, size_t __size, __compar_fn_t __compar)
+         ^
+/usr/include/stdlib.h:755:25: error: unknown type name ‘size_t’
+         size_t __nmemb, size_t __size, __compar_fn_t __compar)
+                         ^
+/usr/include/stdlib.h:764:34: error: unknown type name ‘size_t’
+ extern void qsort (void *__base, size_t __nmemb, size_t __size,
+                                  ^
+/usr/include/stdlib.h:764:50: error: unknown type name ‘size_t’
+ extern void qsort (void *__base, size_t __nmemb, size_t __size,
+                                                  ^
+/usr/include/stdlib.h:843:6: error: unknown type name ‘size_t’
+      size_t __len) __THROW __nonnull ((3, 4, 5));
+      ^
+/usr/include/stdlib.h:846:6: error: unknown type name ‘size_t’
+      size_t __len) __THROW __nonnull ((3, 4, 5));
+      ^
+/usr/include/stdlib.h:850:31: error: unknown type name ‘size_t’
+       char *__restrict __buf, size_t __len)
+                               ^
+/usr/include/stdlib.h:854:31: error: unknown type name ‘size_t’
+       char *__restrict __buf, size_t __len)
+                               ^
+/usr/include/stdlib.h:862:36: error: unknown type name ‘size_t’
+ extern int mblen (const char *__s, size_t __n) __THROW;
+                                    ^
+/usr/include/stdlib.h:866:34: error: unknown type name ‘size_t’
+      const char *__restrict __s, size_t __n) __THROW;
+                                  ^
+/usr/include/stdlib.h:873:8: error: unknown type name ‘size_t’
+ extern size_t mbstowcs (wchar_t *__restrict  __pwcs,
+        ^
+/usr/include/stdlib.h:874:32: error: unknown type name ‘size_t’
+    const char *__restrict __s, size_t __n) __THROW;
+                                ^
+/usr/include/stdlib.h:876:8: error: unknown type name ‘size_t’
+ extern size_t wcstombs (char *__restrict __s,
+        ^
+/usr/include/stdlib.h:877:38: error: unknown type name ‘size_t’
+    const wchar_t *__restrict __pwcs, size_t __n)
+                                      ^
+rotateMatrix.c: In function ‘main’:
+rotateMatrix.c:19:5: error: implicit declaration of function ‘fprintf’ [-Werror=implicit-function-declaration]
+     fprintf(stderr, "Usage : Wrong amount of Arguments\n");
+     ^
+rotateMatrix.c:19:5: error: incompatible implicit declaration of built-in function ‘fprintf’ [-Werror]
+rotateMatrix.c:19:5: note: include ‘<stdio.h>’ or provide a declaration of ‘fprintf’
+rotateMatrix.c:19:13: error: ‘stderr’ undeclared (first use in this function)
+     fprintf(stderr, "Usage : Wrong amount of Arguments\n");
+             ^
+rotateMatrix.c:19:13: note: each undeclared identifier is reported only once for each function it appears in
+rotateMatrix.c:23:3: error: unknown type name ‘FILE’
+   FILE * f = fopen(argv[1],"r");
+   ^
+rotateMatrix.c:23:14: error: implicit declaration of function ‘fopen’ [-Werror=implicit-function-declaration]
+   FILE * f = fopen(argv[1],"r");
+              ^
+rotateMatrix.c:23:14: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]
+rotateMatrix.c:25:5: error: incompatible implicit declaration of built-in function ‘fprintf’ [-Werror]
+     fprintf(stderr,"Usage : Couldn't open file\n");
+     ^
+rotateMatrix.c:25:5: note: include ‘<stdio.h>’ or provide a declaration of ‘fprintf’
+rotateMatrix.c:29:11: error: implicit declaration of function ‘fgetc’ [-Werror=implicit-function-declaration]
+   int c = fgetc(f);
+           ^
+rotateMatrix.c:30:11: error: ‘EOF’ undeclared (first use in this function)
+   if(c == EOF){
+           ^
+rotateMatrix.c:31:5: error: incompatible implicit declaration of built-in function ‘fprintf’ [-Werror]
+     fprintf(stderr, "Usage : Empty File\n");
+     ^
+rotateMatrix.c:31:5: note: include ‘<stdio.h>’ or provide a declaration of ‘fprintf’
+rotateMatrix.c:41:7: error: incompatible implicit declaration of built-in function ‘fprintf’ [-Werror]
+       fprintf(stderr,"Usage: Exceed maximal number of rows ");
+       ^
+rotateMatrix.c:41:7: note: include ‘<stdio.h>’ or provide a declaration of ‘fprintf’
+rotateMatrix.c:50:2: error: incompatible implicit declaration of built-in function ‘fprintf’ [-Werror]
+  fprintf(stderr, "Usage: Missing newline command at the end of the row\n");
+  ^
+rotateMatrix.c:50:2: note: include ‘<stdio.h>’ or provide a declaration of ‘fprintf’
+rotateMatrix.c:57:2: error: incompatible implicit declaration of built-in function ‘fprintf’ [-Werror]
+  fprintf(stderr, "Usage: the row have less than 10 characters\n");
+  ^
+rotateMatrix.c:57:2: note: include ‘<stdio.h>’ or provide a declaration of ‘fprintf’
+rotateMatrix.c:67:3: error: implicit declaration of function ‘fclose’ [-Werror=implicit-function-declaration]
+   fclose(f);// close the file
+   ^
+rotateMatrix.c:70:5: error: incompatible implicit declaration of built-in function ‘fprintf’ [-Werror]
+     fprintf(stderr, "Usage: insufficent number of rows\n");
+     ^
+rotateMatrix.c:70:5: note: include ‘<stdio.h>’ or provide a declaration of ‘fprintf’
+rotateMatrix.c:78:7: error: implicit declaration of function ‘printf’ [-Werror=implicit-function-declaration]
+       printf("%c",input_matrix[i][j]);
+       ^
+rotateMatrix.c:78:7: error: incompatible implicit declaration of built-in function ‘printf’ [-Werror]
+rotateMatrix.c:78:7: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+rotateMatrix.c:80:5: error: incompatible implicit declaration of built-in function ‘printf’ [-Werror]
+     printf("\n");
+     ^
+rotateMatrix.c:80:5: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+cc1: all warnings being treated as errors
+The code did not compile!
 
-Overall Grade: A
+Overall Grade: F
