@@ -1,4 +1,4 @@
-#include <stdio.h>
+w#include <stdio.h>
 #include <stdlib.h>
 
 void rotate(char matrix[10][10]){
@@ -54,7 +54,7 @@ int main(int argc, char** argv){
 
     else{ // check if the row has less than 10 characters
       if(c == '\n'){
-	fprintf(stderr, "Usage: the row have less than 10 characters");
+	fprintf(stderr, "Usage: the row have less than 10 characters\n");
 	return EXIT_FAILURE;
       }
 
