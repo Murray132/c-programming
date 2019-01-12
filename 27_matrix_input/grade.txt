@@ -1,8 +1,17 @@
-Grading at Sat Jan 12 00:48:39 UTC 2019
+Grading at Sat Jan 12 00:50:06 UTC 2019
 Attempting to compile rotateMatrix.c
-rotateMatrix.c:17:16: error: expected ‘)’ before ‘char’
- int main(argc, char** argv){
-                ^
+rotateMatrix.c: In function ‘main’:
+rotateMatrix.c:38:11: error: expected ‘)’ before ‘!’ token
+   while( c! = EOF){
+           ^
+rotateMatrix.c:69:12: error: passing argument 1 of ‘printf’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+     printf(stderr, "Usage: insufficent number of rows\n");
+            ^
+In file included from rotateMatrix.c:1:0:
+/usr/include/stdio.h:362:12: note: expected ‘const char * restrict’ but argument is of type ‘struct _IO_FILE *’
+ extern int printf (const char *__restrict __format, ...);
+            ^
+cc1: all warnings being treated as errors
 The code did not compile!
 
 Overall Grade: F
