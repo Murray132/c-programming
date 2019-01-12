@@ -35,7 +35,7 @@ int main(int argc, char** argv){
   int row = 0;
   int column=0;
 
-  while( c! = EOF){
+  while( c != EOF){
 
     if(row >9){// first check whether the input matrix has more than 10 rows
       fprintf(stderr,"Usage: Exceed maximal number of rows ");
@@ -66,7 +66,7 @@ int main(int argc, char** argv){
   fclose(f);// close the file
 
   if(row < 10){
-    printf(stderr, "Usage: insufficent number of rows\n");
+    fprintf(stderr, "Usage: insufficent number of rows\n");
     return EXIT_FAILURE;
   }
 
