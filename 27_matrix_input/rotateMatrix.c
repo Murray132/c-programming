@@ -1,4 +1,4 @@
-w#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 void rotate(char matrix[10][10]){
@@ -38,7 +38,7 @@ int main(int argc, char** argv){
   while( c != EOF){
 
     if(row >9){// first check whether the input matrix has more than 10 rows
-      fprintf(stderr,"Usage: Exceed maximal number of rows ");
+      fprintf(stderr,"Usage: Exceed maximal number of rows\n");
       return EXIT_FAILURE;
     }
 
