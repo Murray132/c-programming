@@ -23,21 +23,20 @@ void add_future_card(future_cards_t * fc, size_t index, card_t * ptr ) {
   }
 }
 
-void future_cards_from_deck(deck_t * deck, future_cards_t * fc ) {
-  if( fc == NULL ) {
+void future_cards_from_deck(deck_t * deck, future_cards_t * fc){
+  if(fc==NULL){
     fprintf(stderr, "Null future cards");
   }
-  if(fc->n_decks > deck->n_cards) {
+  if(fc->n_decks > deck->n_cards){
     fprintf(stderr, "Not enough cards in deck");
   }
   deck_t d;
-  card_t * c;
-  for(size_t i =0; i<fc->decks; i++){
+  card_t *c;
+  for(size_t i=0; i<fc->n_decks; i++){
     c = deck->cards[i];
-    d = fc -> decks[i];
-    for(size_t j = 0; j< d.n_cards;j++){
+    d = fc->decks[i];
+    for(size_t j=0; j<d.n_cards; j++){
       (*(d.cards[j])).value = (*c).value;
       (*(d.cards[j])).suit = (*c).suit;
     }
   }
-}
