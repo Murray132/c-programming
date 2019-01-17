@@ -142,7 +142,6 @@ void free_deck(deck_t * deck) {
     free(deck->cards[i]);
   }
   */
-  dasdad
   free(deck->cards);
   free(deck);
 }
