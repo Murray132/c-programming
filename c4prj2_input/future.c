@@ -40,3 +40,4 @@ void future_cards_from_deck(deck_t * deck, future_cards_t * fc){
       (*(d.cards[j])).suit = (*c).suit;
     }
   }
+}
