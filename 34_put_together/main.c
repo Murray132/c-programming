@@ -60,7 +60,7 @@ int main(int argc, char ** argv) {
     }
     //free the memory for outName and c
     free(outName);
-    free(c);
+    freeCounts(c);
   }
   //free the memory for kv
   freeKVs(kv);
