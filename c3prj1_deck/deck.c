@@ -101,7 +101,7 @@ card_t * add_empty_card(deck_t * deck) {
 
 deck_t * make_deck_exclude(deck_t * excluded_cards) {
   card_t temp;
-  deck_t exclude_deck = malloc(sizeof(*res));
+  deck_t exclude_deck = malloc(sizeof(*exclude_deck));
   res -> n_cards = 0;
   res -> cards = NULL;
   int compare = 0;
