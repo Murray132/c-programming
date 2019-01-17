@@ -1,10 +1,13 @@
-Grading at Thu Jan 17 07:45:26 UTC 2019
+Grading at Thu Jan 17 07:47:09 UTC 2019
 Compiling deck.c -> deck.o
 deck.c: In function ‘make_deck_exclude’:
-deck.c:104:40: error: ‘res’ undeclared (first use in this function)
-   deck_t exclude_deck = malloc(sizeof(*res));
-                                        ^
-deck.c:104:40: note: each undeclared identifier is reported only once for each function it appears in
+deck.c:104:39: error: invalid type argument of unary ‘*’ (have ‘deck_t {aka struct deck_tag}’)
+   deck_t exclude_deck = malloc(sizeof(*exclude_deck));
+                                       ^
+deck.c:105:3: error: ‘res’ undeclared (first use in this function)
+   res -> n_cards = 0;
+   ^
+deck.c:105:3: note: each undeclared identifier is reported only once for each function it appears in
 deck.c:112:19: error: incompatible type for argument 1 of ‘add_card_to’
        add_card_to(exclude_deck, temp);
                    ^
