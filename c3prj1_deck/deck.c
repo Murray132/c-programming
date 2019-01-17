@@ -132,8 +132,8 @@ deck_t * build_remaining_deck(deck_t ** hands, size_t n_hands) {
   }
 
   remaining = make_deck_exclude(deck);
-  free(deck->cards);
-  free(deck);
+ 
+  free_deck(deck)
   return remaining;
 }
 
@@ -142,6 +142,7 @@ void free_deck(deck_t * deck) {
     free(deck->cards[i]);
   }
   */
+  dasdad
   free(deck->cards);
   free(deck);
 }
