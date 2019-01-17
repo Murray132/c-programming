@@ -1,0 +1,23 @@
+Grading at Thu Jan 17 07:45:26 UTC 2019
+Compiling deck.c -> deck.o
+deck.c: In function ‘make_deck_exclude’:
+deck.c:104:40: error: ‘res’ undeclared (first use in this function)
+   deck_t exclude_deck = malloc(sizeof(*res));
+                                        ^
+deck.c:104:40: note: each undeclared identifier is reported only once for each function it appears in
+deck.c:112:19: error: incompatible type for argument 1 of ‘add_card_to’
+       add_card_to(exclude_deck, temp);
+                   ^
+deck.c:83:6: note: expected ‘deck_t * {aka struct deck_tag *}’ but argument is of type ‘deck_t {aka struct deck_tag}’
+ void add_card_to(deck_t * deck, card_t c) {
+      ^
+deck.c:115:10: error: incompatible types when returning type ‘deck_t {aka struct deck_tag}’ but ‘deck_t * {aka struct deck_tag *}’ was expected
+   return exclude_deck;
+          ^
+deck.c:116:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation of deck.c failed
+
+Overall Grade: F
