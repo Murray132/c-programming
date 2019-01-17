@@ -133,7 +133,7 @@ deck_t * build_remaining_deck(deck_t ** hands, size_t n_hands) {
 
   remaining = make_deck_exclude(deck);
  
-  free_deck(deck)
+  free_deck(deck);
   return remaining;
 }
 
