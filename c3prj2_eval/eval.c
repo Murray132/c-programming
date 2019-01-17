@@ -359,7 +359,42 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
 //implementation in eval-c4.o) so that the
 //other functions we have provided can make
 //use of get_match_counts.
-unsigned * get_match_counts(deck_t * hand) ;
+unsigned * get_match_counts(deck_t * hand) {
+  unsigned * match_counts = malloc((hand->n_cards)*sizeof(*match_counts));
+  if(match_counts == NULL) {
+    return NULL;
+  }
+
+  card_t ** c = hand ->cards;
+
+  unsigned current_card_value = c[0]->value;
+
+  size_t card_idx = 0;
+  unsigned count = 0;
+
+  card_t * card_ptr;
+
+  for (size_t i = 0; i<hand->n_cards; i++) {
+    card_ptr = c[i]; // start from the first card in the hand
+    if(card_ptr->value == current_card_value){
+      count++;
+    }
+    else{
+      for(size_t j = card_idx; j < i;j++){// now fill the fist i boxes in the array
+	match_counts[j] = count;
+      }
+      card_idx = i;
+      current_card_value = card_ptr->value;
+      count = 1; // new card appears, so we have count 1 now
+    }
+  }
+  //we may still have the remianing box to fullfill(only 1 box in fact) if the last card is a new one
+  for(size_t k  = card_idx; k<hand->n_cards;k++ ) {
+    match_counts[k] = count;
+  }
+  return match_counts;
+
+}
 
 // We provide the below functions.  You do NOT need to modify them
 // In fact, you should not modify them!
