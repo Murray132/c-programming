@@ -125,7 +125,7 @@ deck_t * build_remaining_deck(deck_t ** hands, size_t n_hands) {
   for(size_t i =0; i< n_hands; i++) {
     temp = hands[i];
     for(size_t j=0; j< temp->n_cards; j++) {
-      deck->cards = realloc(deck->cards, (deck->n_cards+1)*sizeof(*(deck->cards)))	;
+      deck->cards = realloc(deck->cards, (deck->n_cards+1)*sizeof(*(deck->cards)));
       deck->cards[deck->n_cards] = temp->cards[j];
       deck->n_cards = deck->n_cards + 1;
     }
@@ -133,15 +133,16 @@ deck_t * build_remaining_deck(deck_t ** hands, size_t n_hands) {
 
   remaining = make_deck_exclude(deck);
  
-  free_deck(deck);
+  free(deck->cards);
+  free(deck);
   return remaining;
 }
 
 void free_deck(deck_t * deck) {
-  /*for(size_t i =0; i< deck->n_cards; i++){
+  for(size_t i =0; i< deck->n_cards; i++){
     free(deck->cards[i]);
   }
-  */
+  
   free(deck->cards);
   free(deck);
 }
