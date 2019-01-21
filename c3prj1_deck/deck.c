@@ -120,21 +120,23 @@ deck_t * build_remaining_deck(deck_t ** hands, size_t n_hands) {
   deck -> n_cards = 0;
   deck -> cards = NULL;
   deck_t * remaining;
+  deck_t * temp;
+  card_t * temp_c;
   
-  deck_t * temp;  
   for(size_t i =0; i< n_hands; i++) {
     temp = hands[i];
     for(size_t j=0; j< temp->n_cards; j++) {
-      deck->cards = realloc(deck->cards, (deck->n_cards+1)*sizeof(*(deck->cards)));
-      deck->cards[deck->n_cards] = temp->cards[j];
-      deck->n_cards = deck->n_cards + 1;
+      temp_c = temp->cards[j];
+      if(temp_c->value != 0){
+	if(deck_contains(deck,*temp_c) == 0){
+	  add_card_to(deck, *temp_c);
+	}
+      }
     }
   }
 
   remaining = make_deck_exclude(deck);
- 
-  free(deck->cards);
-  free(deck);
+  free_deck(deck);
   return remaining;
 }
 
