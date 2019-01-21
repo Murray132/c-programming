@@ -1,17 +1,10 @@
 #include "eval.h"
-
 #include <stdio.h>
-
 #include <stdlib.h>
-
 #include <assert.h>
 
-
-
-int card_ptr_comp(const void * vp1, const void * vp2) {
-  
+int card_ptr_comp(const void * vp1, const void * vp2) {  
   const card_t * const * cp1 = vp1;
-  
   const card_t * const * cp2 = vp2;
   
   if((**cp1).value > (**cp2).value){
@@ -816,11 +809,61 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
 //other functions we have provided can make
 //use of get_match_counts.
 
-unsigned * get_match_counts(deck_t * hand) {
-
-  return 0;
+unsigned * get_match_counts(deck_t * hand){
+  
+  unsigned * ret_array = malloc((hand->n_cards)*sizeof(*ret_array));
+  
+  if(ret_array == NULL){
+    
+    return NULL;
+    
+  }
+  
+  card_t ** d_cards = hand->cards;
+  
+  unsigned cur_val = d_cards[0]->value;
+  
+  size_t st_idx = 0;
+  
+  unsigned count = 0;
+  
+  card_t * card_p;
+  
+  for(size_t i=0; i<hand->n_cards; i++){
+    
+    card_p = d_cards[i];
+    
+    if(card_p->value == cur_val){
+      
+      count++;
+      
+    }else{
+      
+      for(size_t j=st_idx; j<i; j++){
+	
+	ret_array[j] = count;
+	
+      }
+      
+      st_idx = i;
+      
+      cur_val = card_p->value;
+      
+      count = 1;
+      
+    }
+    
+  }
+  
+  for(size_t j=st_idx; j<hand->n_cards; j++){
+    
+    ret_array[j] = count;
+    
+  }
+  
+  return ret_array;
+  
 }
-
 
 /*
 unsigned * get_match_counts(deck_t * hand) {

@@ -9,22 +9,6 @@
 #include "future.h"
 #include "input.h"
 
-size_t strToInt(char * str){
-  
-  size_t len = strlen(str);
-  size_t res = 0;
-  size_t delta = 0;
-  
-  for(size_t i=0; i<len; i++){
-    delta = str[i] - '0';
-    for(size_t j=0; j<len-i-1; j++){
-      delta = delta * 10; 
-    }
-    res = res + delta; 
-  }
-  return res; 
-}
-
 void actScore(deck_t ** hands, size_t n_hands, int * win_arr){
   size_t bt_hd_idex = 0;
   int comp_res = 0;
